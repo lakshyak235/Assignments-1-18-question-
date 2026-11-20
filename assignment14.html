@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested and Responsive Tables</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #555; padding: 8px; }
+    .responsive { overflow-x: auto; max-width: 700px; }
+  </style>
+</head>
+<body>
+  <h1>Nested Table</h1>
+  <table>
+    <tr>
+      <th>Department</th>
+      <th>Subjects</th>
+    </tr>
+    <tr>
+      <td>Computer Science</td>
+      <td>
+        <table>
+          <tr><th>Subject</th><th>Credits</th></tr>
+          <tr><td>HTML</td><td>3</td></tr>
+          <tr><td>CSS</td><td>3</td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Wide Responsive Table</h2>
+  <div class="responsive" role="region" aria-label="Scrollable student table">
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Course</th><th>Semester</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>101</td><td>Aarav Sharma</td><td>Web Design</td><td>1</td><td>Active</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

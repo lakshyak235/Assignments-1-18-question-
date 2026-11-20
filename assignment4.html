@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic and Non-Semantic Layout</title>
+  <style>
+    body { margin: 0; }
+    header, nav, main, footer { padding: 12px; border: 1px solid #ccc; }
+    main { display: flex; }
+    article, aside { padding: 12px; }
+  </style>
+</head>
+<body>
+  <header><h1>Semantic Layout</h1></header>
+  <nav><a href="#">Home</a> | <a href="#">Articles</a></nav>
+  <main>
+    <article>
+      <h2>Article</h2>
+      <p>Semantic elements describe the meaning of page content.</p>
+    </article>
+    <aside>
+      <h2>Aside</h2>
+      <p>This is related supporting content.</p>
+    </aside>
+  </main>
+  <footer>Copyright 2026</footer>
+
+  <h2>Same layout with div elements</h2>
+  <div style="border:1px solid #ccc;padding:12px">
+    <div><strong>Header</strong></div>
+    <div><strong>Main content</strong></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Page</title>
+  <style>
+    .skip-link { position: absolute; left: -999px; }
+    .skip-link:focus { left: 10px; top: 10px; background: white; padding: 8px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <h1>Accessible Web Page</h1>
+  </header>
+  <nav aria-label="Primary navigation">
+    <a href="#main-content">Main content</a>
+  </nav>
+  <main id="main-content" tabindex="-1">
+    <h2>Page Content</h2>
+    <img src="https://placehold.co/300x180" alt="A descriptive placeholder image">
+    <button type="button" aria-label="Show more information">Show more</button>
+  </main>
+</body>
+</html>

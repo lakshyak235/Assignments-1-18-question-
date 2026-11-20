@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Timetable</title>
+  <style>
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Class Timetable</h1>
+  <table>
+    <caption>Weekly Timetable</caption>
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Monday</th>
+        <th scope="col">Tuesday</th>
+        <th scope="col">Wednesday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">9:00-10:00</th>
+        <td rowspan="2">HTML Lab</td>
+        <td>Mathematics</td>
+        <td>English</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00-11:00</th>
+        <td colspan="2">Seminar</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00-12:00</th>
+        <td>Break</td>
+        <td>CSS</td>
+        <td>JavaScript</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

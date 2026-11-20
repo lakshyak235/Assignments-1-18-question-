@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission Page</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.5; }
+    header, nav, footer { background: #1f4d78; color: white; padding: 12px 20px; }
+    nav a { color: white; margin-right: 14px; }
+    main { max-width: 900px; margin: auto; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #555; padding: 8px; text-align: left; }
+    fieldset { margin-top: 16px; }
+    label { display: inline-block; min-width: 130px; }
+    input, select, textarea { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Admission Portal</h1>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="#courses">Courses</a>
+    <a href="#admission">Admission Form</a>
+  </nav>
+  <main>
+    <section id="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Available Courses</h2>
+      <table>
+        <caption>Admission course details</caption>
+        <thead>
+          <tr>
+            <th scope="col">Course</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Eligibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>B.Sc. Computer Science</td><td>3 Years</td><td>10+2</td></tr>
+          <tr><td>BCA</td><td>3 Years</td><td>10+2</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="admission" aria-labelledby="admission-heading">
+      <h2 id="admission-heading">Admission Form</h2>
+      <form method="post" action="submit.php">
+        <fieldset>
+          <legend>Student Details</legend>
+          <p>
+            <label for="student-name">Full Name:</label>
+            <input type="text" id="student-name" name="student_name"
+                   minlength="3" maxlength="50" required>
+          </p>
+          <p>
+            <label for="student-email">Email:</label>
+            <input type="email" id="student-email" name="email" required>
+          </p>
+          <p>
+            <label for="student-phone">Phone:</label>
+            <input type="tel" id="student-phone" name="phone"
+                   pattern="[0-9]{10}" minlength="10" maxlength="10"
+                   title="Enter exactly 10 digits" required>
+          </p>
+          <p>
+            <label for="student-age">Age:</label>
+            <input type="number" id="student-age" name="age" min="16" max="30" required>
+          </p>
+          <p>
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+              <option value="">Select a course</option>
+              <option>B.Sc. Computer Science</option>
+              <option>BCA</option>
+            </select>
+          </p>
+          <p>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="40"
+                      minlength="10" maxlength="200" required></textarea>
+          </p>
+        </fieldset>
+        <p>
+          <button type="submit">Submit Application</button>
+          <button type="reset">Clear Form</button>
+        </p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Student Admission Portal</p>
+  </footer>
+</body>
+</html>
